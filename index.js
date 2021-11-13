@@ -4,10 +4,11 @@ console.log('Hello Node!');
 const inquirer = require('inquirer');
 const { writeFile } = require('./utils/generateMarkdown');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const promptUser = () => {
-    return inquirer.prompt([
+    inquirer.prompt([
         {
             type: 'input',
             name: 'userName',
@@ -28,12 +29,12 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'projectName',
+            name: 'title',
             message: "3. What is your project's name?"
         },
         {
             type: 'input',
-            name: 'projectDescription',
+            name: 'description',
             message: '4. Please write a short description of your project.'
         },
         {
@@ -44,30 +45,38 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'github',
+            name: 'installation',
             message: '6. What command should be run to install dependencies?',
             default: 'npm i'
         },
         {
             type: 'input',
-            name: 'github',
+            name: 'tests',
             message: '7. What command should be run to run tests?',
             default: 'npm test'
         },
         {
             type: 'input',
-            name: 'repoInstructions',
+            name: 'usage',
             message: '8. What does the user need to know about using the repo?'
         },
         {
             type: 'input',
-            name: 'repoContributions',
+            name: 'contributing',
             message: '9. What does the user need to know about contributing to the repo?'
         },
 
     ])
     .then(data => {
-        console.log(data);
+        //console.log(data);
+        const pageMd = generateMarkdown(data);
+
+        fs.writeFile('./README.md', pageMd, err => {
+        if (err) throw new Error(err);
+
+        console.log('README created! Check out README.md in the project root directory to see it!');
+    });
+          
     })};
 
     promptUser();
@@ -79,6 +88,7 @@ const writeToFile = data => {
             // if there's an error, reject the Promise and send the error to the Promise's '.catch()' method.
             if (err) {
                 reject(err);
+                console.log("oops!");
                 // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well.
                 return;
             }
