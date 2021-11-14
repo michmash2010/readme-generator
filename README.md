@@ -1,10 +1,12 @@
 
   
-  # adkfjhsdfkjlh
+  # lskjlkj
+  
+  ![MIT License Badge](https://img.shields.io/badge/license-MIT-green)
   
   ## Description
 
-  sadkfjhsdfkjhsdfkjdf
+  asdfasdfasdf lkjsdflskdjf
 
   ## Table of Contents
 
@@ -25,23 +27,28 @@
   ```
   npm i
   ```
-  
+
   ## Usage
 
-  asdk;jfh
+  asdfsadf
 
   ## License
 
-  This project is licensed under the MIT,Apache 2.0,GPL 3.0,BSD 3,None license.
+  This project is licensed under the following license:
+  MIT
 
   ## Contributing
 
-  sdkfjshdf
+  asdfsdf
 
   ## Tests
 
+  To run tests, run the following command:
+  ```
   npm test
+  ```
 
   ## Questions 
 
-  For questions, please send email to asdlkfjh
+  For questions about the repo, please open an issue or send email to asdfsadf.
+  You can find more of my work at <https://undefined.github.io/lskjlkj>.
