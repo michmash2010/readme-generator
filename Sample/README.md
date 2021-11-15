@@ -6,7 +6,7 @@
   
   ## Description
 
-  This app generates a professional-quality README file after collecting a few responses from the user via the inquirer package and node.js.
+  This app generates a professional-quality README file after collecting a few responses from the user.
 
   ## Table of Contents
 
@@ -39,9 +39,18 @@
 
   MIT
 
+  License link: https://img.shields.io/badge/license-MIT-green
+
   ## Contributing
 
-  Please make quality pull requests (PR's). 
+  Please make quality pull requests (PR's).  Contributions welcome!
+
+  ## Tests
+
+  To run tests, please run the following command:
+  ```
+  npm test
+  ```
 
   ## Questions 
 

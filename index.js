@@ -1,5 +1,3 @@
-console.log('Hello Node!');
-
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const { writeFile } = require('./utils/generateMarkdown');
@@ -74,7 +72,7 @@ const promptUser = () => {
         fs.writeFile('./README.md', pageMd, err => {
         if (err) throw new Error(err);
 
-        console.log('README created! Check out README.md in the project root directory to see it!');
+        console.log('--Your README has been created! Check out README.md in the project root directory to see it!');
     });
           
     })};
